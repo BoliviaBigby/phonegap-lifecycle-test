@@ -4,20 +4,20 @@ var launched_count = 0;
 
     function onLoad() {
         document.addEventListener("deviceready", onDeviceReady, false);
-		console.log("device ready");
+		console.log("device ready"); //here is the event listener 
     }
 	
 	function updateDisplay() {
-		$("#launched").text("Application launched: " + launched_count);
-		$("#resumed").text("Application paused: " + paused_count);
-		$("#paused").text("Application resumed: " + resumed_count);
+		$("#launched").text("Application launched: " + launched_count); //these are the lifecycle events that are captured
+		$("#resumed").text("Application paused: " + paused_count); //these are the lifecycle events that are captured
+		$("#paused").text("Application resumed: " + resumed_count); //these are the lifecycle events that are captured
 	}
 
 
     // device APIs are available
-    //
+    // here is the event handler
     function onDeviceReady() {
-		alert("device ready");
+		alert("hi olivia"); //the event handler reacts to a function
         
 		document.addEventListener("resume", onResume, false);
 		document.addEventListener("pause", onPause, false);
@@ -27,7 +27,7 @@ var launched_count = 0;
     }
 
     // Handle the pause event
-    //
+    // 
     function onPause() {
 		alert("pause");
 		paused_count++;
